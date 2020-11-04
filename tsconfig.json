@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "strict": true,
+    "rootDir": "./src",
+    "outDir": "./dir"
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ],
+}
