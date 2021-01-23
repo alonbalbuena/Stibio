@@ -1,0 +1,8 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "endOfLine": "crlf",
+  "htmlWhitespaceSensitivity": "css",
+  "bracketSpacing": true,
+  "arrowParens": "always"
+}
