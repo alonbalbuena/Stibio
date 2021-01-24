@@ -1,1 +1,1 @@
-{"version":3,"file":"inicio.js","sourceRoot":"","sources":["../src/inicio.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,WAAW,CAAC;AAEhC,MAAM,IAAI,GAAG,QAAQ,CAAC,aAAa,CAAC,MAAM,CAAC,IAAI,QAAQ,CAAC,IAAI,CAAC;AAC7D,MAAM,QAAQ,GAAG,IAAI,OAAO,CAAC,yDAAyD,CAAC,CAAC;AAExF,QAAQ;KACL,UAAU,EAAE;KACZ,IAAI,CAAC,CAAC,MAAU,EAAC,EAAE,CAAA,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC,SAAS,CAAC,MAAM,CAAC,CAAC,CAAC"}
+{"version":3,"file":"inicio.js","sourceRoot":"","sources":["../src/inicio.ts"],"names":[],"mappings":""}
