@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "node  --experimental-specifier-resolution=node --trace-warnings --loader ts-node/esm src\\index.ts",
-    "build": "tsc --project . --watch"
+    "compile": "tsc --project . --watch",
+    "build": "tsc --project ."
   },
   "repository": {
     "type": "git",
