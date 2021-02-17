@@ -1,7 +1,7 @@
 FROM node:15-buster-slim
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /alicia
 
 # Install app dependencies
 COPY package.json ./
