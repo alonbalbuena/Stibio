@@ -1,4 +1,4 @@
-FROM node:15-alpine-3.13
+FROM node:15.8.0-alpine3.13
 
 # Create app directory
 WORKDIR /alicia
