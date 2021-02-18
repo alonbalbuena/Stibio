@@ -4,7 +4,8 @@ FROM node:15-buster-slim
 WORKDIR /alicia
 
 # Install app dependencies
-COPY package.json ./
+COPY package.json .
+
 RUN npm install
 
 # Bundle app source
