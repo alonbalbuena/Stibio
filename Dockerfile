@@ -6,6 +6,8 @@ WORKDIR /alicia
 # Install app dependencies
 COPY package.json .
 
+RUN npm update -g
+
 RUN npm install
 
 # Bundle app source
