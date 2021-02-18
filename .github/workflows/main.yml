@@ -37,9 +37,6 @@ jobs:
           tags: |
             silox/alicia:latest
             ghcr.io/alonbalbuena/alicia:latest
-          build-args: |
-            arg1=value1
-            arg2=value2
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
