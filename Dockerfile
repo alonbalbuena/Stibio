@@ -1,4 +1,4 @@
-FROM node:15-buster-slim
+FROM node:15-alpine-3.13
 
 # Create app directory
 WORKDIR /alicia
