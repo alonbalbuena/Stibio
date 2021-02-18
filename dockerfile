@@ -8,7 +8,7 @@ COPY package.json .
 
 RUN npm update -g
 
-RUN npm install
+RUN ["npm", "install"]
 
 # Bundle app source
 COPY . .
