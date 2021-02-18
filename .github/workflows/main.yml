@@ -33,6 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          context: .
           tags: |
             silox/alicia:latest
             ghcr.io/alonbalbuena/alicia:latest
