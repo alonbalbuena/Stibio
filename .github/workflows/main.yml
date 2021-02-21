@@ -34,8 +34,8 @@ jobs:
         with:
           push: true
           tags: |
-            silox/alicia:${{ secrets.GITHUB_RUN_ID }}
-            ghcr.io/alonbalbuena/alicia:${{ secrets.GITHUB_RUN_ID }}
+            silox/alicia:$GITHUB_RUN_ID
+            ghcr.io/alonbalbuena/alicia:$GITHUB_RUN_ID
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
