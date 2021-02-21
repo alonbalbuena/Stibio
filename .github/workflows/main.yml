@@ -9,6 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+          name: Checkout
+          uses: actions/checkout@v2
+      -
+          name: Docker meta
+          id: docker_meta
+          uses: crazy-max/ghaction-docker-meta@v1
+          with:
+            # list of Docker images to use as BASE NAME for tags like a template
+            images: |
+              silox/alicia
+              ghcr.io/alonbalbuena/alicia
+            # add git short SHA as Docker tag
+            tag-sha: true
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
@@ -33,9 +47,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: |
-            "silox/alicia:$GITHUB_RUN_ID"
-            "ghcr.io/alonbalbuena/alicia:$GITHUB_RUN_ID"
+          tags: ${{ steps.docker_meta.outputs.tags }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
