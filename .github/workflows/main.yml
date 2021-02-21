@@ -55,7 +55,8 @@ jobs:
         name: multiple command
         uses: appleboy/ssh-action@master
         with:
-          host: afterwork@MBP-de-Alonso
+          username: ${{ secrets.USERNAME }}
+          host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY_MACBOOK }}
           script: |
             whoami
