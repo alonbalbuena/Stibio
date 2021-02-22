@@ -59,5 +59,4 @@ jobs:
           host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY_MACBOOK }}
           script: |
-            whoami
-            ls -al
+            docker run silox/alicia:latest
