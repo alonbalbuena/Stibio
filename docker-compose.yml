@@ -1,0 +1,28 @@
+# we store in a volume "like a database" declared in local with "docker volume create"
+volumes:
+  web_data:
+    external: true
+services:
+  web:
+    container_name: web
+    restart: always
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    ports: 
+      - "8080:8080"
+    links:
+      - mysql:database-network
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql
+    restart: always
+    image:  mysql:8.0.23
+    command: --default-authentication-plugin=mysql_native_password
+    environment: 
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes: 
+      - type: volume
+        source: web_data
+        target: /var/lib/mysql
