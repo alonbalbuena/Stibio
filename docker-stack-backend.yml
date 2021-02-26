@@ -1,18 +1,10 @@
+# define version of the file to allow automatic docker swamr
+version: "3.9"
 # we store in a volume "like a database" declared in local with "docker volume create"
 volumes:
   web_data:
     external: true
 services:
-  web:
-    container_name: web
-    restart: always
-    build:
-      context: .
-      dockerfile: ./dockerfile
-    ports: 
-      - "8080:8080"
-    depends_on:
-      - mysql
   mysql:
     container_name: mysql
     restart: always
@@ -24,3 +16,8 @@ services:
       - type: volume
         source: web_data
         target: /var/lib/mysql
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        max_replicas_per_node: 1
