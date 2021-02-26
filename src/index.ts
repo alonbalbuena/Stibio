@@ -8,8 +8,8 @@ const app: Application = express();
 
 app.use(express.static("dist"));
 
-app.listen(8080, () => {
-  console.log("server start, port 8080");
+app.listen(31415, () => {
+  console.log("server start, port 31415");
 });
 
 app.get("/", (_req: Request, res: Response) => {
