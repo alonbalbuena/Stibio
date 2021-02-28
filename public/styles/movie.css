@@ -1,6 +1,5 @@
 :host {
   border-radius: var(--border-radius);
-  flex: 1 1 calc(24 * var(--sizing-factor));
   position: relative;
   transform-style: preserve-3d;
   perspective-origin: center;
@@ -28,42 +27,43 @@
   height: 100%;
 }
 
-:host .movie__release {
-}
-
-:host .movie__sinopsis {
-}
-
-:host .movie__poster {
-}
-
 :host .back {
   position: absolute;
   top: 0;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+:host .back__title {
+  font-family: var(--font-main);
+  margin-top: 0;
 }
 
 @keyframes flip-front {
   0% {
-    transform: rotateY(0deg) perspective(330px);
+    transform: perspective(330px) rotateY(0deg);
   }
   50% {
-    transform: rotateY(90deg) perspective(330px);
+    transform: perspective(330px) rotateY(90deg);
   }
   100% {
-    transform: rotateY(180deg) perspective(330px);
+    transform:  perspective(330px) rotateY(180deg);
   }
 }
 
 @keyframes flip-back {
   0% {
-    transform: rotateY(180deg) perspective(330px);
+    transform:  perspective(330px) rotateY(180deg);
   }
   50% {
-    transform: rotateY(270deg) perspective(330px);
+    transform: perspective(330px) rotateY(270deg);
   }
   100% {
-    transform: rotateY(360deg) perspective(330px);
+    transform: perspective(330px) rotateY(360deg);
   }
 }
