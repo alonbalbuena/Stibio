@@ -1,6 +1,5 @@
 import APIResponse from "../models/APIResponse.js";
 import Movie from "../models/Movie.js";
-import Search from "../models/APISearch.js";
 import APIConfiguration from "../models/APIConfiguration.js";
 
 class SearchBox extends HTMLFormElement {
