@@ -1,6 +1,7 @@
 import APIResponse from "../models/APIResponse.js";
 import Movie from "../models/Movie.js";
 import APIConfiguration from "../models/APIConfiguration.js";
+import APISearch from "../models/APISearch.js";
 
 class SearchBox extends HTMLFormElement {
   moviesSection = document.querySelector(".movies") ?? document.body;
