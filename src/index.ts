@@ -6,15 +6,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app: Application = express();
 
-app.use(express.static("dist"));
+//scripts route /components/Glass.js
+app.use("/scripts", express.static("dist"));
+//css route /public/styles/glass.css
+app.use("/public", express.static("public"));
 
-app.listen(8080, () => {
-  console.log("server start, port 8080");
+app.listen(31415, () => {
+  console.log("server start, port 31415");
 });
 
 app.get("/", (_req: Request, res: Response) => {
   res.sendFile("inicio.html", { root: path.join(__dirname, "..") });
 });
-
-console.log(path.join(__dirname, ".."));
-console.log("Current working directory: ", process.cwd());
