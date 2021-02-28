@@ -31,7 +31,10 @@ class SearchBox extends HTMLFormElement {
     });
   }
 
-  setMovies(response: { configuration: any; search: Search }): void {
+  setMovies(response: {
+    configuration: APIConfiguration;
+    search: APISearch;
+  }): void {
     this.buildUrlImages(response.search.results, response.configuration);
 
     //dynamic import for movies component
