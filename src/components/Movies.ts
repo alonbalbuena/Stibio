@@ -1,8 +1,6 @@
 import Movie from "../models/Movie.js";
 
 export default class Movies extends HTMLElement {
-  moviesSection = document.querySelector(".movies") ?? document.body;
-
   constructor(movies: Movie[]) {
     super();
     this.attachShadow({ mode: "open" });
