@@ -9,9 +9,14 @@
     "outDir": "./dist",
     "moduleResolution": "Node",
     "esModuleInterop": true,
+    "incremental": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules",
     "**/node_modules/*"
-  ],
+  ]
 }
