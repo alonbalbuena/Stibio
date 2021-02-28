@@ -3,8 +3,8 @@ import Movie from "../models/Movie.js";
 import APIConfiguration from "../models/APIConfiguration.js";
 import APISearch from "../models/APISearch.js";
 
-class SearchBox extends HTMLFormElement {
-  moviesSection = document.querySelector(".movies") ?? document.body;
+export default class SearchBox extends HTMLFormElement {
+  moviesSection = document.querySelector(".content") ?? document.body;
 
   constructor() {
     super();
