@@ -621,14 +621,9 @@
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
-      "./src/utils/utils.ts": {
-        "version": "c838a7281012a5c7fd260afedfc780f880ea7f23017f96b871389434fab0752b",
-        "signature": "e3910493f60b76465d39610b7816881e74762f77d2b58fc9922f5ea9b7765193",
-        "affectsGlobalScope": false
-      },
       "./src/components/movie.ts": {
-        "version": "6fe042d428608c7c4a962274d0c2e33aa9fdeb72cb38bd7cddb7ca25e80e60f1",
-        "signature": "655f1cac203d7e0568c27b9fbc31c7160243156823b2ccc1f44d44308c4821ef",
+        "version": "203a0b4535df35fc3e581d0841b1ab0d4c499affb34fd73c5b056f184d476bc1",
+        "signature": "7c0acb084208b0361dcca92ce55d28c2c23d216f9296c94a96aa596808488ec9",
         "affectsGlobalScope": false
       },
       "./src/components/movies.ts": {
@@ -946,9 +941,7 @@
         "./src/components/component.ts"
       ],
       "./src/components/movie.ts": [
-        "./src/components/component.ts",
-        "./src/models/movie.ts",
-        "./src/utils/utils.ts"
+        "./src/models/movie.ts"
       ],
       "./src/components/movies.ts": [
         "./src/components/movie.ts",
@@ -1216,7 +1209,6 @@
         "./src/components/component.ts"
       ],
       "./src/components/movie.ts": [
-        "./src/components/component.ts",
         "./src/models/movie.ts"
       ],
       "./src/components/movies.ts": [
