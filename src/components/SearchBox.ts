@@ -8,7 +8,12 @@ export default class SearchBox extends HTMLFormElement {
 
   constructor() {
     super();
-    this.innerHTML = `<input type="text"/><input type="submit" value="Submit">`;
+    this.innerHTML = `
+    <link rel="stylesheet" href="/public/styles/search-box.css">
+    <div class="search">
+      <input class="search__input" type="text"/>
+    </div>
+    <input class="button" type="submit" value="Submit">`;
   }
   connectedCallback(): void {
     this.addEventListener("submit", () => {
