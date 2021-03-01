@@ -7,11 +7,14 @@
   --jet: hsla(120, 2%, 20%, 1);
   --jet--light: hsla(120, 2%, 20%, 1);
   --sizing-factor: 8px;
+  --movie-card: calc(24 * var(--sizing-factor));
   --border-radius: 5px;
   --small: 8px;
   --medium: 16px;
   --big: 24px;
   --transition: 0.2s;
+  --font-main: 'Kreon', serif;
+  --font-secondary: 'Exo 2', sans-serif;
 }
 
 
@@ -30,7 +33,7 @@ body {
     "header header header" 100px
     ". main ." 1fr
     "footer footer footer" 100px
-    / minmax(10%, 100px) 1fr minmax(10%, 100px);;
+    / minmax(10%, 100px) 1fr minmax(10%, 100px);
 }
 
 .head {
