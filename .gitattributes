@@ -1,2 +1,2 @@
 *.yml linguist-language=Dockerfile
-dist -linguist-vendored
+dist/* -linguist-vendored
