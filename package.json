@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node --max_old_space_size=4096 --experimental-modules  --experimental-specifier-resolution=node --trace-warnings --loader ts-node/esm src/index.ts",
-    "compile": "npm run build -- --watch"
+    "dev": "npm run build -- --watch",
+    "build": "tsc --project . --watch"
   },
   "repository": {
     "type": "git",
