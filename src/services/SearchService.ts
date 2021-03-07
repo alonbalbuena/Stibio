@@ -1,6 +1,6 @@
-import APIConfiguration from "./models/APIConfiguration.js";
-import APIResponse from "./models/APIResponse.js";
-import APISearch from "./models/APISearch.js";
+import APIConfiguration from "../models/APIConfiguration.js";
+import APIResponse from "../models/APIResponse.js";
+import APISearch from "../models/APISearch.js";
 
 export default class Service {
   protected headers = {
