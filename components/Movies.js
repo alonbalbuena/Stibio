@@ -6,7 +6,7 @@ export default class Movies extends HTMLElement {
             const cards = movies.map((result) => new module.default(result));
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = ``;
-                this.shadowRoot.innerHTML = `<link rel="stylesheet" href="/public/styles/movies.css">`;
+                this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./public/styles/movies.css">`;
                 this.shadowRoot?.append(...cards);
             }
         });

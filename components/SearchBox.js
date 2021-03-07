@@ -3,7 +3,7 @@ export default class SearchBox extends HTMLFormElement {
         super();
         this.moviesSection = document.querySelector(".content") ?? document.body;
         this.innerHTML = `
-    <link rel="stylesheet" href="/public/styles/search-box.css">
+    <link rel="stylesheet" href="./public/styles/search-box.css">
     <div class="search">
       <input class="search__input" type="text"/>
     </div>
