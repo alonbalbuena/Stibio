@@ -9,7 +9,7 @@ export default class SearchBox extends HTMLFormElement {
   constructor() {
     super();
     this.innerHTML = `
-    <link rel="stylesheet" href="/public/styles/search-box.css">
+    <link rel="stylesheet" href="./public/styles/search-box.css">
     <div class="search">
       <input class="search__input" type="text"/>
     </div>

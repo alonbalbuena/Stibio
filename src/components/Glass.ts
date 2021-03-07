@@ -4,7 +4,7 @@ export default class Glass extends Component {
   constructor() {
     super();
     this.shadow.innerHTML = `
-    <link rel="stylesheet" href="/public/styles/glass.css">
+    <link rel="stylesheet" href="./public/styles/glass.css">
     <div class="glass"></div>`;
   }
 }

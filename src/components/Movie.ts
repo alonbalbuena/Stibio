@@ -6,7 +6,7 @@ export default class MovieCard extends Component {
   constructor(dataMovie: Movie) {
     super();
     this.shadow.innerHTML = `
-    <link rel="stylesheet" href="/public/styles/movie.css">
+    <link rel="stylesheet" href="./public/styles/movie.css">
     <div class="front">
       <img class="front__poster" src="${dataMovie.poster_path}" alt="${dataMovie.title}" loading="lazy"/>
     </div>

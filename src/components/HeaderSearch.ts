@@ -4,7 +4,7 @@ export default class HeaderSearch extends Component {
   constructor() {
     super();
     this.shadow.innerHTML = `
-      <link rel="stylesheet" href="/public/styles/header-search.css">
+      <link rel="stylesheet" href="./public/styles/header-search.css">
       <glass-search></glass-search>
       <form class="search-box" is="search-box" onsubmit="return false"></form>
       `;
