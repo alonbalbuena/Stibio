@@ -6,9 +6,7 @@ services:
     container_name: web
     restart: always
     ports: 
-      - "31415:31415"
-    depends_on:
-      - mysql
+      - "31415:80"
     deploy:
       mode: replicated
       replicas: 6
