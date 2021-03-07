@@ -1,5 +1,5 @@
-import Component from "./Component.js";
-import Movie from "../models/movie.js";
+import Component from "../components/Component.js";
+import Movie from "../models/Movie.js";
 import Utils from "../utils/Utils.js";
 
 export default class MovieCard extends Component {
