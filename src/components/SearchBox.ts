@@ -17,7 +17,7 @@ export default class SearchBox extends HTMLFormElement {
   }
   connectedCallback(): void {
     this.addEventListener("submit", () => {
-      void import("../Service.js").then((module) => {
+      void import("../services/SearchService.js").then((module) => {
         const servicio = new module.default();
         const query = (this.elements[0] as HTMLInputElement).value;
         void servicio
