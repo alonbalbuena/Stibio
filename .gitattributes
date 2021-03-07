@@ -1,1 +1,2 @@
 *.yml linguist-language=Dockerfile
+./dist linguist-detectable
