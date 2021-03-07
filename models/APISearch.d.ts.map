@@ -1,0 +1,1 @@
+{"version":3,"file":"APISearch.d.ts","sourceRoot":"","sources":["../../src/models/APISearch.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,YAAY,CAAC;AAE/B,MAAM,CAAC,OAAO,WAAW,SAAS;IAChC,IAAI,EAAE,MAAM,CAAC;IACb,OAAO,EAAE,KAAK,EAAE,CAAC;IACjB,WAAW,EAAE,MAAM,CAAC;IACpB,aAAa,EAAE,MAAM,CAAC;CACvB"}

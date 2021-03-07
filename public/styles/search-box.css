@@ -1,0 +1,29 @@
+/*
+  it is necesary to indicate that it is a host of form
+  because when you definde the componet
+  <form is="search-box"></form>
+  but it is also posible to do
+  <form is="another-component"></form>
+*/
+:host form {
+  display: flex;
+  width: 150px;
+}
+
+.search {
+  flex: 1 0 80%;
+}
+
+.search__input {
+  width: 100%;
+  height: var(--big);
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+.button {
+  flex: 1 0 20%;
+  border: none;
+}

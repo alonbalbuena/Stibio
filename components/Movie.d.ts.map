@@ -1,0 +1,1 @@
+{"version":3,"file":"Movie.d.ts","sourceRoot":"","sources":["../../src/components/Movie.ts"],"names":[],"mappings":"AAAA,OAAO,SAAS,MAAM,4BAA4B,CAAC;AACnD,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAGvC,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,SAAS;gBAClC,SAAS,EAAE,KAAK;IAa5B,iBAAiB,IAAI,IAAI;CAW1B"}

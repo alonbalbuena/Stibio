@@ -1,0 +1,1 @@
+{"version":3,"file":"HeaderTitle.js","sourceRoot":"","sources":["../../src/components/HeaderTitle.ts"],"names":[],"mappings":"AAAA,OAAO,SAAS,MAAM,gBAAgB,CAAC;AAEvC,MAAM,WAAY,SAAQ,SAAS;IACjC;QACE,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,MAAM,CAAC,SAAS,GAAG;;;OAGrB,CAAC;IACN,CAAC;CACF;AAED,MAAM,CAAC,cAAc,CAAC,MAAM,CAAC,cAAc,EAAE,WAAW,CAAC,CAAC"}
