@@ -11,8 +11,10 @@ app.use("/scripts", express.static("dist"));
 //css route /public/styles/glass.css
 app.use("/public", express.static("public"));
 
-app.listen(31415, () => {
-  console.log("server start, port 31415");
+const port = process.env.PORT || 80;
+
+app.listen(port, () => {
+  console.log("server started localhost:" + port);
 });
 
 app.get("/", (_req: Request, res: Response) => {
