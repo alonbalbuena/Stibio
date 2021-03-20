@@ -1,0 +1,12 @@
+.wrapper {
+  flex: 1;
+}
+
+.wrapper__input {
+  width: 100%;
+  height: var(--big);
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}

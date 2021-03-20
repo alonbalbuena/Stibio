@@ -11,7 +11,9 @@ export default class HeaderSearch extends Component {
   }
 
   connectedCallback(): void {
-    this.shadow.querySelector("glass-search")?.addEventListener("click", () => this.open());
+    this.shadow
+      .querySelector("glass-search")
+      ?.addEventListener("click", () => this.open());
   }
 
   open(): void {

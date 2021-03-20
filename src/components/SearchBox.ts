@@ -10,13 +10,17 @@ export default class SearchBox extends HTMLFormElement {
     super();
     this.innerHTML = `
     <link rel="stylesheet" href="./public/styles/search-box.css">
-    <div class="search">
-      <input class="search__input" type="text"/>
-    </div>
-    <input class="button" type="submit" value="Submit">`;
+    <primary-input ></primary-input >
+    <primary-button class="button"> Send </primary-button>`;
   }
   connectedCallback(): void {
-    this.addEventListener("submit", () => {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    this.addEventListener("submit", this.getMovies);
+  }
+
+  getMovies(): () => void {
+    return (): void => {
+      console.log("hola");
       void import("../services/SearchService.js").then((module) => {
         const servicio = new module.default();
         const query = (this.elements[0] as HTMLInputElement).value;
@@ -24,7 +28,7 @@ export default class SearchBox extends HTMLFormElement {
           .request(query)
           .then((results: APIResponse) => this.setMovies(results));
       });
-    });
+    };
   }
 
   buildUrlImages(results: Movie[], configuration: APIConfiguration): void {

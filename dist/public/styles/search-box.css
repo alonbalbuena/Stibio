@@ -10,19 +10,6 @@
   width: 150px;
 }
 
-.search {
-  flex: 1;
-}
-
-.search__input {
-  width: 100%;
-  height: var(--big);
-  box-sizing: border-box;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: none;
-}
-
 .button {
   border: none;
 }
