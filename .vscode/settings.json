@@ -1,5 +1,5 @@
 {
   "cssVariables.lookupFiles": [
-    "public/styles/inicio.css"
+    "dist/public/styles/inicio.css"
   ]
 }
