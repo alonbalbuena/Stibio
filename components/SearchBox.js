@@ -4,13 +4,15 @@ export default class SearchBox extends HTMLFormElement {
         this.moviesSection = document.querySelector(".content") ?? document.body;
         this.innerHTML = `
     <link rel="stylesheet" href="./public/styles/search-box.css">
-    <div class="search">
-      <input class="search__input" type="text"/>
-    </div>
-    <input class="button" type="submit" value="Submit">`;
+    <primary-input ></primary-input >
+    <primary-button class="button"> Send </primary-button>`;
     }
     connectedCallback() {
-        this.addEventListener("submit", () => {
+        this.addEventListener("submit", this.getMovies);
+    }
+    getMovies() {
+        return () => {
+            console.log("hola");
             void import("../services/SearchService.js").then((module) => {
                 const servicio = new module.default();
                 const query = this.elements[0].value;
@@ -18,7 +20,7 @@ export default class SearchBox extends HTMLFormElement {
                     .request(query)
                     .then((results) => this.setMovies(results));
             });
-        });
+        };
     }
     buildUrlImages(results, configuration) {
         results.forEach((result) => {

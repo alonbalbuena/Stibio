@@ -5,6 +5,7 @@ export default class SearchBox extends HTMLFormElement {
     moviesSection: Element;
     constructor();
     connectedCallback(): void;
+    getMovies(): () => void;
     buildUrlImages(results: Movie[], configuration: APIConfiguration): void;
     setMovies(response: {
         configuration: APIConfiguration;
