@@ -2,11 +2,11 @@ import Route from "./Route.js";
 
 export const routes: Route[] = [
   {
-    path: "/",
+    path: "/Stibio/",
     template: `<home-view></home-view>`,
   },
   {
-    path: "/watched",
+    path: "/Stibio/watched",
     template: `<watched-view></watched-view>`,
   }
 ];

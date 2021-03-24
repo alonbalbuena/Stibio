@@ -25,12 +25,7 @@ export default class Router {
   }
 
   findRoute(path: string): Route {
-    return (
-      this.routes.find((route) => route.path === path) ?? {
-        path: "/",
-        template: `<home-view></home-view>`,
-      }
-    );
+    return this.routes.find((route) => route.path === path) ?? this.routes[0];
   }
 
   push(
