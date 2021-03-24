@@ -1,5 +1,7 @@
 {
   "cssVariables.lookupFiles": [
     "dist/public/styles/inicio.css"
-  ]
+  ],
+  "files.eol": "\r\n",
+  "liveServer.settings.root": "/"
 }
