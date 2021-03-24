@@ -22,14 +22,13 @@ export default class Router {
 
   initRouter(): void {
     const url = globalThis.location.pathname;
-    const path = url === "/dist" ? "home" : url.replace("/", "");
-    this.push(path);
+    this.push(url);
   }
 
   findRoute(path: string): Route {
     return (
       this.routes.find((route) => route.path === path) ?? {
-        path: "/dist/",
+        path: "/",
         template: `<home-view></home-view>`,
       }
     );
