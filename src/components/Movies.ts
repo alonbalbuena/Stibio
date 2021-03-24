@@ -4,7 +4,6 @@ export default class Movies extends HTMLElement {
   constructor(movies: Movie[]) {
     super();
     this.attachShadow({ mode: "open" });
-
     //dynamic import for movies card
     void import("./Movie.js").then((module) => {
       const cards = movies.map((result: Movie) => new module.default(result));
