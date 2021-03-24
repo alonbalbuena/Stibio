@@ -1,0 +1,1 @@
+{"version":3,"file":"Route.js","sourceRoot":"","sources":["../../src/router/Route.ts"],"names":[],"mappings":"","sourcesContent":["export default interface Route {\r\n  path: string;\r\n  template: string;\r\n}\r\n"]}

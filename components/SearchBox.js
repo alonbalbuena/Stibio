@@ -12,7 +12,6 @@ export default class SearchBox extends HTMLFormElement {
     }
     getMovies() {
         return () => {
-            console.log("hola");
             void import("../services/SearchService.js").then((module) => {
                 const servicio = new module.default();
                 const query = this.elements[0].value;

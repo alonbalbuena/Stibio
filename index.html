@@ -35,17 +35,18 @@
     <script type="module" src="./components/Button.js"></script>
     <script type="module" src="./components/Input.js"></script>
     <script type="module" src="./components/WatchedButton.js"></script>
+    <script type="module" src="./components/View.js"></script>
+    <script type="module" src="./components/ViewHome.js"></script>
+    <script type="module" src="./components/ViewWatched.js"></script>
     <link type="text/css" rel="stylesheet" href="./public/styles/inicio.css" />
-    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com">
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Exo+2:wght@300&family=Kreon:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Exo+2:wght@300&family=Kreon:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <watched-button></watched-button>
-    <header class="head">
-      <header-title class="prueba"></header-title>
-      <header-search class="head-search"></header-search>
-    </header>
-    <main class="content"></main>
-    <footer></footer>
+    <router-view> </router-view>
   </body>
 </html>

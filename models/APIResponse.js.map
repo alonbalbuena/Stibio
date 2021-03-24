@@ -1,1 +1,1 @@
-{"version":3,"file":"APIResponse.js","sourceRoot":"","sources":["../../src/models/APIResponse.ts"],"names":[],"mappings":""}
+{"version":3,"file":"APIResponse.js","sourceRoot":"","sources":["../../src/models/APIResponse.ts"],"names":[],"mappings":"","sourcesContent":["import APIConfiguration from \"./APIConfiguration.js\";\nimport APISearch from \"./APISearch.js\";\n\nexport default interface APIResponse {\n  search: APISearch;\n  configuration: APIConfiguration;\n}\n"]}
