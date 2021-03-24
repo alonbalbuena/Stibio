@@ -3,20 +3,23 @@
     "module": "ESNext",
     "target": "ESNext",
     "jsx": "preserve",
-    "sourceMap": true,
     "strict": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "incremental": true,
     "experimentalDecorators": true,
-    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
-    "declarationMap": true
+    "sourceMap": true,
+    "composite": true
   },
-  "exclude": [
-    "node_modules/**/*",
+  "exclude": ["node_modules/**/*"],
+  "references": [
+    {
+      "path": "tsconfig.develop.json"
+    },
+    {
+      "path": "tsconfig.production.json"
+    }
   ]
 }
