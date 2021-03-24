@@ -1,4 +1,3 @@
-import { resolve } from "path";
 import RouteData from "./RouteData.js";
 
 export default class RouteEvent extends Event {

@@ -1,4 +1,3 @@
-import { resolve } from "path";
 import Route from "./Route.js";
 import RouteEvent from "./RouteEvent.js";
 
