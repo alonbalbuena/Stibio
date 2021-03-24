@@ -13,10 +13,7 @@ export default class Router {
         this.push(url);
     }
     findRoute(path) {
-        return (this.routes.find((route) => route.path === path) ?? {
-            path: "/",
-            template: `<home-view></home-view>`,
-        });
+        return this.routes.find((route) => route.path === path) ?? this.routes[0];
     }
     push(path, beforeUpdate = () => new Promise((resolve) => {
         resolve();

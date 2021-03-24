@@ -1,10 +1,10 @@
 export const routes = [
     {
-        path: "/",
+        path: "/Stibio/",
         template: `<home-view></home-view>`,
     },
     {
-        path: "/watched",
+        path: "/Stibio/watched",
         template: `<watched-view></watched-view>`,
     }
 ];
