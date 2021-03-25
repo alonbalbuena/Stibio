@@ -33,7 +33,7 @@ export default class WatchedButton extends Component {
   changeRoute(): void {
     this.dispatchEvent(
       new RouteEvent(
-        "/dist/watched",
+        "/Stibio/watched",
         () => this.toggleAnimation(),
         () => this.toggleAnimation()
       )
