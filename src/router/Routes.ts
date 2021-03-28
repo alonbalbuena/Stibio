@@ -2,7 +2,7 @@ import Route from "./Route.js";
 
 export const routes: Route[] = [
   {
-    path: "/",
+    path: "", //this is replaced by "/"
     template: `<home-view></home-view>`,
   },
   {
