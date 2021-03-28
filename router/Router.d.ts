@@ -3,6 +3,7 @@ import RouteEvent from "./RouteEvent.js";
 export default class Router {
     routes: Route[];
     view: Element;
+    landingRoute: string;
     constructor(view: Element, routes: Route[], landingRoute: string);
     handleEvent: (event: RouteEvent) => void;
     private appendUrlToRoutes;

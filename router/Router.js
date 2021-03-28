@@ -3,6 +3,7 @@ export default class Router {
         this.handleEvent = (event) => {
             this.push(event.details.to, event.details.beforeRoute, event.details.afterRoute);
         };
+        this.landingRoute = landingRoute;
         this.view = view;
         this.appendUrlToRoutes(routes, landingRoute);
         this.initRouter();
@@ -33,7 +34,7 @@ export default class Router {
         const route = this.findRoute(path);
         this.view.children[1].innerHTML = route.template;
         return new Promise((resolve) => {
-            window.history.pushState({}, "done", route.path);
+            window.history.pushState({}, "done", this.landingRoute + route.path);
             resolve();
         });
     }
