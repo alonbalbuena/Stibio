@@ -22,6 +22,7 @@ export default class Router {
   };
 
   private appendUrlToRoutes(routes: Route[], landingRoute: string): void {
+    routes.shift(); //home not append lading URL
     this.routes = routes.map((route) => {
       return { ...route, path: landingRoute + route.path };
     });
