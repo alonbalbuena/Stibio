@@ -53,12 +53,12 @@ export default class Router {
   }
 
   async pushState(path: string): Promise<void> {
-    const route = this.findRoute(path);
+    const route = this.findRoute(this.landingRoute + path);
 
     this.view.children[1].innerHTML = route.template;
 
     return new Promise((resolve) => {
-      window.history.pushState({}, "done", this.landingRoute + route.path);
+      window.history.pushState({}, "done", route.path);
       resolve();
     });
   }
