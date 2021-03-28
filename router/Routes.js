@@ -4,7 +4,7 @@ export const routes = [
         template: `<home-view></home-view>`,
     },
     {
-        path: `watched`,
+        path: "/watched",
         template: `<watched-view></watched-view>`,
     },
 ];
