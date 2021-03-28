@@ -3,8 +3,9 @@ import RouteEvent from "./RouteEvent.js";
 export default class Router {
     routes: Route[];
     view: Element;
-    constructor(view: Element, routes: Route[]);
+    constructor(view: Element, routes: Route[], landingRoute: string);
     handleEvent: (event: RouteEvent) => void;
+    private appendUrlToRoutes;
     initRouter(): void;
     findRoute(path: string): Route;
     push(path: string, beforeUpdate?: () => Promise<void>, afterUpdate?: () => Promise<void>): void;

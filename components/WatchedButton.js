@@ -1,4 +1,3 @@
-import { env } from "../env/actualEnvironment.js";
 import RouteEvent from "../router/RouteEvent.js";
 import Component from "./Component.js";
 export default class WatchedButton extends Component {
@@ -22,7 +21,7 @@ export default class WatchedButton extends Component {
         this.style.setProperty("--animation-duration", `${this.animationDuration}ms`);
     }
     changeRoute() {
-        this.dispatchEvent(new RouteEvent(`${env.landingRoute}watched`, () => this.toggleAnimation(), () => this.toggleAnimation()));
+        this.dispatchEvent(new RouteEvent(`watched`, () => this.toggleAnimation(), () => this.toggleAnimation()));
     }
     later(delay) {
         return new Promise((resolve) => {
