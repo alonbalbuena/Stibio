@@ -34,7 +34,7 @@ export default class WatchedButton extends Component {
   changeRoute(): void {
     this.dispatchEvent(
       new RouteEvent(
-        `${env.landingRoute}watched`,
+        `watched`,
         () => this.toggleAnimation(),
         () => this.toggleAnimation()
       )

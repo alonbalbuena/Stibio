@@ -2,11 +2,11 @@ import Route from "./Route.js";
 import RouteEvent from "./RouteEvent.js";
 
 export default class Router {
-  routes: Route[];
+  routes!: Route[];
   view: Element;
-  constructor(view: Element, routes: Route[]) {
+  constructor(view: Element, routes: Route[], landingRoute: string) {
     this.view = view;
-    this.routes = routes;
+    this.appendUrlToRoutes(routes, landingRoute);
     this.initRouter(); // called when going loading a page for first time
     view.addEventListener("route", { handleEvent: this.handleEvent }, false);
   }
@@ -18,6 +18,12 @@ export default class Router {
       event.details.afterRoute
     );
   };
+
+  private appendUrlToRoutes(routes: Route[], landingRoute: string): void {
+    this.routes = routes.map((route) => {
+      return { ...route, path: landingRoute + route.path };
+    });
+  }
 
   initRouter(): void {
     const url = globalThis.location.pathname;
