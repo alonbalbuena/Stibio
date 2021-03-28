@@ -9,7 +9,7 @@ export default class Router {
     this.landingRoute = landingRoute;
     this.view = view;
     this.appendUrlToRoutes(routes, landingRoute);
-    this.initRouter(); // called when going loading a page for first time
+    this.initRouter();
     view.addEventListener("route", { handleEvent: this.handleEvent }, false);
   }
 
@@ -23,11 +23,7 @@ export default class Router {
 
   private appendUrlToRoutes(routes: Route[], landingRoute: string): void {
     this.routes = routes.map((route) => {
-      if (route.path === "/") {
-        //home not append landing URL
-        return { ...route, path: landingRoute + route.path };
-      }
-      return route;
+      return { ...route, path: landingRoute + route.path };
     });
   }
 
