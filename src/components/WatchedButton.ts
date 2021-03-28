@@ -1,3 +1,4 @@
+import { env } from "../env/actualEnvironment.js";
 import RouteEvent from "../router/RouteEvent.js";
 import Component from "./Component.js";
 
@@ -33,7 +34,7 @@ export default class WatchedButton extends Component {
   changeRoute(): void {
     this.dispatchEvent(
       new RouteEvent(
-        "/Stibio/watched",
+        `${env.landingRoute}watched`,
         () => this.toggleAnimation(),
         () => this.toggleAnimation()
       )
