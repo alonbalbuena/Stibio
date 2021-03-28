@@ -10,6 +10,7 @@ export default class Router {
         view.addEventListener("route", { handleEvent: this.handleEvent }, false);
     }
     appendUrlToRoutes(routes, landingRoute) {
+        routes.shift();
         this.routes = routes.map((route) => {
             return { ...route, path: landingRoute + route.path };
         });
