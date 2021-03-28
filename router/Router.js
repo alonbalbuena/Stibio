@@ -31,10 +31,10 @@ export default class Router {
             .then(() => afterUpdate());
     }
     async pushState(path) {
-        const route = this.findRoute(path);
+        const route = this.findRoute(this.landingRoute + path);
         this.view.children[1].innerHTML = route.template;
         return new Promise((resolve) => {
-            window.history.pushState({}, "done", this.landingRoute + route.path);
+            window.history.pushState({}, "done", route.path);
             resolve();
         });
     }
