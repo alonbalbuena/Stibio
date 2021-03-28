@@ -11,10 +11,7 @@ export default class Router {
     }
     appendUrlToRoutes(routes, landingRoute) {
         this.routes = routes.map((route) => {
-            if (route.path === "/") {
-                return { ...route, path: landingRoute + route.path };
-            }
-            return route;
+            return { ...route, path: landingRoute + route.path };
         });
     }
     initRouter() {
