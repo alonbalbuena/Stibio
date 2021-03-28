@@ -4,7 +4,9 @@ import RouteEvent from "./RouteEvent.js";
 export default class Router {
   routes!: Route[];
   view: Element;
+  landingRoute: string;
   constructor(view: Element, routes: Route[], landingRoute: string) {
+    this.landingRoute = landingRoute;
     this.view = view;
     this.appendUrlToRoutes(routes, landingRoute);
     this.initRouter(); // called when going loading a page for first time
@@ -56,7 +58,7 @@ export default class Router {
     this.view.children[1].innerHTML = route.template;
 
     return new Promise((resolve) => {
-      window.history.pushState({}, "done", route.path);
+      window.history.pushState({}, "done", this.landingRoute + route.path);
       resolve();
     });
   }
