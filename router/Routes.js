@@ -1,6 +1,6 @@
 export const routes = [
     {
-        path: "/",
+        path: "",
         template: `<home-view></home-view>`,
     },
     {
