@@ -1,7 +1,7 @@
 export const envs = {
     development: {
-        landingRoute: "/dist/",
+        landingRoute: "/dist",
     },
-    production: { landingRoute: "/Stibio/" },
+    production: { landingRoute: "/Stibio" },
 };
 //# sourceMappingURL=environment.js.map
