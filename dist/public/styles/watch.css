@@ -1,5 +1,5 @@
 .watch {
-  --top: 80%;
+  --top: 90%;
   --left: 90%;
   --size: 3%;
   z-index: 2;
@@ -23,5 +23,4 @@
   position: absolute;
   left: calc(var(--left) - var(--size) / 2);
   top: calc(var(--top) - var(--size) / 2);
-  clip-path: circle(3% at var(--left) var(--top));
 }
