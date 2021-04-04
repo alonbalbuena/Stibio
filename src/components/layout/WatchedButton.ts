@@ -1,6 +1,5 @@
-import { env } from "../env/actualEnvironment.js";
-import RouteEvent from "../router/RouteEvent.js";
-import Component from "./Component.js";
+import RouteEvent from "../../router/RouteEvent.js";
+import Component from "../lib/Component.js";
 
 export default class WatchedButton extends Component {
   animationDuration = 1000;
@@ -8,14 +7,14 @@ export default class WatchedButton extends Component {
     super();
     this.shadow.innerHTML = `
     <link type="text/css" rel="stylesheet" href="./public/styles/watch.css" />
-    <div class="watch"><img class="watch__eye" src="./public/icons/eye.svg" /></div>`;
+    <div class="watch"><img class="watch__eye" src="" /></div>`;
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-    window.CSS.registerProperty({
+    /*window.CSS.registerProperty({
       name: "--default-duration",
       syntax: "<number>",
       inherits: false,
       initialValue: `${this.animationDuration}`,
-    });
+    });*/
   }
   connectedCallback(): void {
     this.shadow.querySelector(".watch")?.addEventListener(
@@ -29,6 +28,23 @@ export default class WatchedButton extends Component {
       "--animation-duration",
       `${this.animationDuration}ms`
     );
+  }
+
+  static get observedAttributes(): string[] {
+    return ["image-url"];
+  }
+
+  attributeChangedCallback(
+    name: string,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    oldValue: string,
+    newValue: string
+  ): void {
+    if (name === "image-url") {
+      this.shadow
+        .querySelector("img")
+        ?.setAttribute("src", window.location.pathname + newValue);
+    }
   }
 
   changeRoute(): void {

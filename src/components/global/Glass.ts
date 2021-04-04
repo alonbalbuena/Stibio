@@ -1,4 +1,4 @@
-import Component from "./Component.js";
+import Component from "../lib/Component.js";
 
 export default class Glass extends Component {
   constructor() {
