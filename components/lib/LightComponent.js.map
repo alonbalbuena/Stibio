@@ -1,1 +1,0 @@
-{"version":3,"file":"LightComponent.js","sourceRoot":"","sources":["../../../src/components/lib/LightComponent.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,WAAW;IACrD;QACE,KAAK,EAAE,CAAC;IACV,CAAC;CACF","sourcesContent":["export default class LightComponent extends HTMLElement {\r\n  constructor() {\r\n    super();\r\n  }\r\n}"]}
