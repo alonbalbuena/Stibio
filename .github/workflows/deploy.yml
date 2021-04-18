@@ -4,8 +4,6 @@ on:
   workflow_run:
     workflows:
       - Compilation
-    branches:
-      - main
     types:
       - completed
 jobs:
