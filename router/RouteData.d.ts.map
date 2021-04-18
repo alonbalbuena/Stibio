@@ -1,0 +1,1 @@
+{"version":3,"file":"RouteData.d.ts","sourceRoot":"","sources":["../../src/router/RouteData.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,WAAW,SAAS;IAChC,EAAE,EAAE,MAAM,CAAC;IACX,WAAW,EAAE,MAAM,OAAO,CAAC,IAAI,CAAC,CAAC;IACjC,UAAU,EAAE,MAAM,OAAO,CAAC,IAAI,CAAC,CAAC;CACjC"}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+    <script type="module" src="./components/layout/head/HeaderTitle.js"></script>
+    <script type="module" src="./components/layout/head/HeaderSearch.js"></script>
+    <script type="module" src="./components/global/Glass.js"></script>
+    <script type="module" src="./components/layout/head/SearchBox.js"></script>
+    <script type="module" src="./components/global/Button.js"></script>
+    <script type="module" src="./components/global/Input.js"></script>
+    <script type="module" src="./components/layout/WatchedButton.js"></script>
+    <script type="module" src="./components/views/View.js"></script>
+    <script type="module" src="./components/views/ViewHome.js"></script>
+    <script type="module" src="./components/views/ViewWatched.js"></script>
+    <link type="text/css" rel="stylesheet" href="./public/styles/inicio.css" />
+    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Exo+2:wght@300&family=Kreon:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <router-view> </router-view>
+  </body>
+</html>

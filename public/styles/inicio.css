@@ -1,0 +1,27 @@
+:root {
+  --timberwolf: hsla(150, 14%, 84%, 1);
+  --alabaster: hsla(81, 28%, 90%, 1);
+  --maize-crayola: hsla(44, 88%, 66%, 1);
+  --eerie-black: hsla(60, 1%, 14%, 1);
+  --eerie-black--light: hsla(120, 2%, 20%, 1);
+  --jet: hsla(120, 2%, 20%, 1);
+  --jet--light: hsla(120, 2%, 20%, 1);
+  --sizing-factor: 8px;
+  --movie-card: calc(24 * var(--sizing-factor));
+  --border-radius: 5px;
+  --small: 8px;
+  --medium: 16px;
+  --big: 24px;
+  --transition: 0.2s;
+  --font-main: 'Kreon', serif;
+  --font-secondary: 'Exo 2', sans-serif;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}

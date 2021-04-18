@@ -1,0 +1,26 @@
+.watch {
+  --top: 90%;
+  --left: 90%;
+  --size: 3%;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--maize-crayola);
+  clip-path: circle(var(--size) at var(--left) var(--top));
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: clip-path var(--animation-duration) ease-in-out;
+}
+.watch--transition {
+  clip-path: circle(100%);
+}
+
+.watch__eye {
+  width: var(--size);
+  height: var(--size);
+  object-fit: contain;
+  position: absolute;
+  left: calc(var(--left) - var(--size) / 2);
+  top: calc(var(--top) - var(--size) / 2);
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"APISearch.js","sourceRoot":"","sources":["../../src/models/APISearch.ts"],"names":[],"mappings":"","sourcesContent":["import Movie from \"./Movie.js\";\n\nexport default interface APISearch {\n  page: number;\n  results: Movie[];\n  total_pages: number;\n  total_results: number;\n}\n"]}

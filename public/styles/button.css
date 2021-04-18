@@ -1,0 +1,7 @@
+button,
+input[type="submit"] {
+  border-radius: var(--border-radius);
+  border: none;
+  padding: var(--small) var(--medium);
+  background-color: var(--maize-crayola);
+}
