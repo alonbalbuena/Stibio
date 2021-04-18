@@ -66,6 +66,8 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+  deploy-server:
+    runs-on: ubuntu-latest
       - 
         name: multiple command
         uses: appleboy/ssh-action@master
