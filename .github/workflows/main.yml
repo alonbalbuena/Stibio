@@ -28,6 +28,9 @@ jobs:
           name: build-files
           path: ./dist
       -
+          name: list files dist
+          run: ls ./dist
+      -
           name: Set up Docker meta for naming
           id: docker_meta
           uses: crazy-max/ghaction-docker-meta@v1
