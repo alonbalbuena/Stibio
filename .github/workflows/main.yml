@@ -1,4 +1,4 @@
-name: compilation
+name: Compilation
 on:
   push:
     branches: master

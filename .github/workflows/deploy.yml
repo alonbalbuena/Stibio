@@ -1,10 +1,11 @@
 
-name: deploy
-
+name: Deploy
 on:
   workflow_run:
-    workflows: ["compilation"]
-    branches: [main]
+    workflows:
+      - Compilation
+    branches:
+      - main
     types:
       - completed
 jobs:
