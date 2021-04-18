@@ -3,7 +3,7 @@ name: Deploy
 on:
   workflow_run:
     workflows:
-      - Compilation
+      - Build, docker and gh-pages
     types:
       - completed
 jobs:
@@ -14,16 +14,6 @@ jobs:
       - uses: haya14busa/action-workflow_run-status@v1
       - uses: actions/checkout@v2
       - run: exit 0
-  github-pages:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-        -
-          name: Publish Github Actions
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist
   deploy-ssh-server:
     runs-on: ubuntu-latest
     steps:
