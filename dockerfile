@@ -1,6 +1,11 @@
 FROM nginx:stable-alpine
 
-COPY ./dist /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
+
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+COPY ./dist/* ./
 
 EXPOSE 8080
 
@@ -8,4 +13,5 @@ EXPOSE 8080
 # we can se if it is "healthy" or "unhealthy" in docker status
 HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://localhost:80 || exit 1
 
-CMD ["npm", "run", "start"]
+# Containers run nginx with global directives and daemon off
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
