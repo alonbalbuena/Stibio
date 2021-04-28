@@ -1,15 +1,6 @@
 FROM nginx:stable-alpine
 
-WORKDIR /usr/share/nginx/html
-
-# Remove default nginx static assets
-RUN rm -rf ./*
-
-RUN mkdir Stibio
-
-RUN ls
-
-COPY /dist/* ./Stibio/
+COPY ./dist/* /usr/share/nginx/html
 
 # It checks itself status returning 1 or 0
 # we can se if it is "healthy" or "unhealthy" in docker status
