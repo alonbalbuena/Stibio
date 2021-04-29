@@ -1,8 +1,13 @@
 FROM nginx:stable-alpine
 
-COPY . /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
-RUN ls /usr/share/nginx/html
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+RUN ls .
+
+COPY dist .
 
 # It checks itself status returning 1 or 0
 # we can se if it is "healthy" or "unhealthy" in docker status
