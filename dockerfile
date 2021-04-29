@@ -1,6 +1,6 @@
 FROM httpd:2.4.46-alpine
 
-WORKDIR /var/www/html
+WORKDIR /usr/local/apache2/htdocs/
 
 # Remove default static assets
 RUN rm -rf ./*
@@ -13,4 +13,4 @@ COPY . .
 # we can se if it is "healthy" or "unhealthy" in docker status
 HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://localhost:80 || exit 1
 
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+CMD [“/bin/bash”]
