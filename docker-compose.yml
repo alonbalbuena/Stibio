@@ -5,9 +5,6 @@ services:
     image: silox/alicia:master
     ports:
     - "31415:80"
-    environment:
-    - NGINX_HOST=test.com
-    - NGINX_PORT=80
     container_name: web
     restart: always
     build:
