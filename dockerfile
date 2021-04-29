@@ -1,8 +1,8 @@
-FROM nginx:stable-alpine
+FROM httpd:2.4.46-alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html
 
-# Remove default nginx static assets
+# Remove default static assets
 RUN rm -rf ./*
 
 RUN ls .
@@ -13,5 +13,4 @@ COPY . .
 # we can se if it is "healthy" or "unhealthy" in docker status
 HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://localhost:80 || exit 1
 
-# Containers run nginx with global directives and daemon off
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
