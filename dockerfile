@@ -5,8 +5,6 @@ WORKDIR /usr/local/apache2/htdocs/
 # Remove default static assets
 RUN rm -rf ./*
 
-RUN ls .
-
 COPY . ./Stibio
 
 # It checks itself status returning 1 or 0
