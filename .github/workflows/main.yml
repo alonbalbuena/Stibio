@@ -57,7 +57,10 @@ jobs:
         with:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
+          #context inside dist
           context: ./dist
+          #but dockerfile outside of it
+          file: ../dockerfile
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
   github-pages:
