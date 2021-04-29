@@ -24,4 +24,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY_MACBOOK }}
-          script: docker run -d silox/alicia:latest
+          script: docker run -d silox/alicia:master
