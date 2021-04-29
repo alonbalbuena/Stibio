@@ -60,7 +60,7 @@ jobs:
           #context inside dist
           context: ./dist
           #but dockerfile outside of it
-          file: ../dockerfile
+          file: dockerfile
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
   github-pages:
