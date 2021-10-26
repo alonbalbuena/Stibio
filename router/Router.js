@@ -1,14 +1,17 @@
 export default class Router {
+    routes;
+    view;
+    landingRoute;
     constructor(view, routes, landingRoute) {
-        this.handleEvent = (event) => {
-            this.push(event.details.to, event.details.beforeRoute, event.details.afterRoute);
-        };
         this.landingRoute = landingRoute;
         this.view = view;
         this.appendUrlToRoutes(routes, landingRoute);
         this.initRouter();
         view.addEventListener("route", { handleEvent: this.handleEvent }, false);
     }
+    handleEvent = (event) => {
+        this.push(event.details.to, event.details.beforeRoute, event.details.afterRoute);
+    };
     appendUrlToRoutes(routes, landingRoute) {
         this.routes = routes.map((route) => {
             return { ...route, path: landingRoute + route.path };

@@ -1,8 +1,8 @@
 import LightComponent from "../../lib/LightComponent.js";
 export default class SearchBox extends LightComponent {
+    moviesSection = document.querySelector(".content") ?? document.body;
     constructor() {
         super();
-        this.moviesSection = document.querySelector(".content") ?? document.body;
         this.innerHTML = `
     <link rel="stylesheet" href="./public/styles/search-box.css">
     <primary-input ></primary-input >

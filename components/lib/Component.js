@@ -1,4 +1,5 @@
 export default class Component extends HTMLElement {
+    shadow;
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
