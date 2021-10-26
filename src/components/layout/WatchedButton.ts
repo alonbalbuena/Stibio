@@ -49,7 +49,7 @@ export default class WatchedButton extends Component {
 
   changeRoute(): void {
     const parsedUrl = new URL(window.location.href)
-if(!parsedUrl.pathname==='/watched'){
+if(parsedUrl.pathname!=='/watched'){
     this.dispatchEvent(
       new RouteEvent(
         `/watched`,
@@ -58,7 +58,7 @@ if(!parsedUrl.pathname==='/watched'){
       )
     );
   }else{
-this.dispatchEvent(new RouteEvent('',()=>this.toggleAnimation(),()=>this.toggleAnimation()))
+this.dispatchEvent(new RouteEvent('',() => this.toggleAnimation(), () => this.toggleAnimation()))
     }
   }
 
