@@ -58,7 +58,7 @@ if(!parsedUrl.pathname==='/watched'){
       )
     );
   }else{
-this.dispatchEvent(new RouteEvent('',()=>this.toggleAnimatio(),()=>this.toggleAnimation()))
+this.dispatchEvent(new RouteEvent('',()=>this.toggleAnimation(),()=>this.toggleAnimation()))
     }
   }
 
