@@ -1,6 +1,6 @@
 export const envs = {
     development: {
-        landingRoute: "/dist",
+        landingRoute: "/",
     },
     production: { landingRoute: "/Stibio" },
 };

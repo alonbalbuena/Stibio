@@ -1,1 +1,1 @@
-{"version":3,"file":"IEnvironment.js","sourceRoot":"","sources":["../../src/env/IEnvironment.ts"],"names":[],"mappings":"","sourcesContent":["export default interface IEnv {\r\n  landingRoute: string;\r\n}\r\n"]}
+{"version":3,"file":"IEnvironment.js","sourceRoot":"","sources":["../../src/env/IEnvironment.ts"],"names":[],"mappings":"","sourcesContent":["export default interface IEnv {\n  landingRoute: string;\n}\n"]}

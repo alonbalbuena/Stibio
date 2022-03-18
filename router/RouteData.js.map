@@ -1,1 +1,1 @@
-{"version":3,"file":"RouteData.js","sourceRoot":"","sources":["../../src/router/RouteData.ts"],"names":[],"mappings":"","sourcesContent":["export default interface RouteData {\r\n  to: string;\r\n  beforeRoute: () => Promise<void>;\r\n  afterRoute: () => Promise<void>;\r\n}\r\n"]}
+{"version":3,"file":"RouteData.js","sourceRoot":"","sources":["../../src/router/RouteData.ts"],"names":[],"mappings":"","sourcesContent":["export default interface RouteData {\n  to: string;\n  beforeRoute: () => Promise<void>;\n  afterRoute: () => Promise<void>;\n}\n"]}
