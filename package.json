@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "node --max_old_space_size=4096 --experimental-modules  --experimental-specifier-resolution=node --trace-warnings --loader ts-node/esm src/index.ts",
-    "dev": "npm run reset && sh env.sh development && tsc --project tsconfig.develop.json --watch",
-    "build": "npm run reset && sh env.sh production && tsc --project tsconfig.production.json",
-    "reset": "rm -f *.tsbuildinfo && mv -i dist/*.html dist/public . && rm -rf dist && mkdir -p dist && mv *.html public dist/"
+    "predev": "rm -f *.tsbuildinfo  && rm -rf dist && mkdir -p dist ",
+    "statics": "cp -v -i -r src/*.html src/public dist/",
+    "dev": "npm run statics && sh env.sh development && tsc --project tsconfig.develop.json --watch",
+    "build": "npm run statics && sh env.sh production && tsc --project tsconfig.production.json"
   },
   "repository": {
     "type": "git",
