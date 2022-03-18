@@ -1,0 +1,5 @@
+:host {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--movie-card), 1fr));
+}

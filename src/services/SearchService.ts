@@ -8,13 +8,14 @@ export default class Service {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNjVlMjZiYWQ4OGNlYjM3ODEzMjhiYmI2MGRjMTA5NCIsInN1YiI6IjVmNzllMDBiOWE2NDM1MDAzNmE2NTdlNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cWjSac35Ni053K6oss4iD7qM9IWeM-TT2zb3DQhbACw",
     "Content-Type": "application/json;charset=utf-8",
   };
+
   request(query: string): Promise<APIResponse> {
-    return Promise.all<APISearch, APIConfiguration>([
-      this.getResults(query),
-      this.getConfiguration(),
-    ]).then(([search, configuration]) => {
-      return { search: search, configuration: configuration };
-    });
+    return Promise.all([this.getResults(query), this.getConfiguration()]).then(
+      ([search, configuration]) => ({
+        search: search,
+        configuration: configuration,
+      })
+    );
   }
   getResults(query: string): Promise<APISearch> {
     return fetch(
